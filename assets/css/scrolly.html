@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+              ___          ___         ___          ___          ___          ___      ___               
+      ___    /__/\        /  /\       /  /\        /  /\        /  /\        /  /\    /  /\        ___   
+     /  /\   \  \:\      /  /::\     /  /:/_      /  /:/_      /  /:/_      /  /::\  /  /::\      /  /\  
+    /  /:/    \__\:\    /  /:/\:\   /  /:/ /\    /  /:/ /\    /  /:/ /\    /  /:/\:\/  /:/\:\    /  /:/  
+   /  /:/ ___ /  /::\  /  /:/~/:/  /  /:/ /:/_  /  /:/ /:/_  /  /:/ /::\  /  /:/~/:/  /:/  \:\  /  /:/   
+  /  /::\/__/\  /:/\:\/__/:/ /:/__/__/:/ /:/ /\/__/:/ /:/ /\/__/:/ /:/\:\/__/:/ /:/__/:/ \__\:\/  /::\   
+ /__/:/\:\  \:\/:/__\/\  \:\/:::::|  \:\/:/ /:/\  \:\/:/ /:/\  \:\/:/~/:/\  \:\/:/\  \:\ /  /:/__/:/\:\  
+ \__\/  \:\  \::/      \  \::/~~~~ \  \::/ /:/  \  \::/ /:/  \  \::/ /:/  \  \::/  \  \:\  /:/\__\/  \:\ 
+      \  \:\  \:\       \  \:\      \  \:\/:/    \  \:\/:/    \__\/ /:/    \  \:\   \  \:\/:/      \  \:\
+       \__\/\  \:\       \  \:\      \  \::/      \  \::/       /__/:/      \  \:\   \  \::/        \__\/
+             \__\/        \__\/       \__\/        \__\/        \__\/        \__\/    \__\/              
+
+
+
+      This framework and functionality is based on this: https://github.com/vlandham/scroll_demo
+      For a full rundown of the theory behind it, see: http://vallandingham.me/scroller.html
+      We have tweaked to make it populoate more dynamically, and include interactive goodies like
+      WebGL, SVG, etc. in the <vis> div created for the original interactive it was intended for.
+
+     |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||| Facebook Sharing Content |||||||||||||||||||||||||||||||||||| -->
+
+<meta property="og:title" content="*** [ Your Title Here ] ***">
+<meta property="og:site_name" content="*** [ Your Sitename Here ] ***">
+<meta property="og:url" content="*** [ Your Link Here ] ***">
+<meta property="og:description" content="*** [ Your Description Here ] ***">
+<meta property="fb:app_id" content="*** [ Your FB App ID Here ] ***">
+<meta property="og:type" content="website">
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- ||||||||||||||| Twitter Sharing Content |||||||||||||||||||||| -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@threespot" />
+<meta name="twitter:creator" content="@threespot" />
+<meta property="og:image" content="http://cultureondemand.com/stories/3./scrolly/0.jpg" />
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<meta name="Description" content="*** [ Your Description Here ] ***">
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<title>Scrolly as Hell</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>  
+	<link rel="stylesheet" type="text/css" href="css/scrolly.css"/>
+	<link href='https://fonts.googleapis.com/css?family=Trocchi|Vast+Shadow' rel='stylesheet' type='text/css'> 
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+  <script type="text/javascript" src="js/content.js"></script>
+
+
+ 
+  <script type="text/javascript">
+     function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+  </script>
+
+
+ 
+
+
+</head>
+
+ <body> 
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||| VIDEO ELEMENT ACTIVATE IN daddy .js file |||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||| Uncomment to use vid & make changes to function  |||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||  
+
+ <video autoplay playsinline muted loop poster="1.jpg" id="bgvid0" class="videobig" style="display: none;">
+     <source src="images/wb_shoot.webm" type="video/webm">
+     <source src="images/wb_shoot.mp4" type="video/mp4">
+</video>
+
+     |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+      
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||| SITE FURNITURE |||||||||||||||||||||||||||| -->
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||  LOADER |||||||||||||||||||||||||||||||||||| -->
+<div id="play">
+  <div id="loader">
+  </div>
+</div>
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| TOP RIGHT MENU |||||||||||||||||||||||||||||||||| -->
+<div id="menu" onclick="toggle_visibility('toc');" style="cursor: pointer;">
+    <img src="menu.png" alt="Threespot" border="0" height="100%" align="right">
+</div>
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| BOTTOM LEFT DIV ||||||||||||||||||||||||||||||||| -->
+ <div id="output">
+ </div>
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+  
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| TOP LEFT LOGO ||||||||||||||||||||||||||||||||||| -->
+<div id="pmnglogo" onclick="toggle_visibility('toc');" style="cursor: pointer;">
+    <img src='images/icon_big_boot.png' border='0' alt='' style='width:5em; min-width:50px;'>
+</div>
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| TABLE OF CONTENTS ||||||||||||||||||||||||||||||| -->
+<div id="toc"> 
+Table of Contents:
+<br />
+TOC HERE
+<br />
+</div>
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| This is where the content lives ||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| Main container div |||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| Graphic div is the parent for scrolling ||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| Containers have bgs and top bars |||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- ||||| Section contains steps which are the scrolling text |||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+<div class="container" id="container">
+<div id="graphic">
+
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| add a static title container |||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+<div id=container0><div id=topbar0></div><div class=bgbg id=big0 style=background-image:url(0.jpg);></div></div>
+
+
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| OUTPUT THE REST OF THE SLIDES ||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| FIND THE CONTENT IN content.js |||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| CALCULATES ARRAY OF HEADS FOR OUTPUT |||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+<script type="text/javascript">
+
+var h = 1;
+var text = "";
+
+while (heads[h]) {
+ /////////////   text += heads[h] + "<br>";
+    
+    text+= '<div id=container'+h+'><div id=topbar>'+heads[h] + '</div><div id=big'+h+' class=bgbg style=background-image:url('+h+'.jpg); onresize=onResize('+h+');></div></div>';
+    h++;
+}
+
+document.write(text);
+
+
+</script>
+
+
+
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+
+
+<div id="sections">
+
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| add a static step container ||||||||||||||||||||| -->
+<!-- |||||||||||| the title slide with scroll prompt |||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+<!-- ### 0 ### -->
+<section class="step">
+<a name="jump"></a>
+<div class="title" style="color:#000 !important;font-family:'Oswald', sans-serif;font-weight:700;line-height:1em;text-transform:uppercase; ">
+QUALITY STANDARDS
+</div>
+for Expanded Learning in Public and Affordable Housing
+<span id="scrollimg">
+  <a href="#jump" style="background: none !important; z-index: 9999999; ">
+    <img src="scrolldown.png" border="0" alt="Scroll Down For More" style="text-align: center; ">
+  </a></span>
+</section>
+
+
+
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| OUTPUT THE REST OF THE STEPS |||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| FIND THE CONTENT IN content.js |||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| CALCULATES ARRAY OF TITLES FOR OUTPUT ||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+
+
+
+
+<script type="text/javascript">
+
+
+var p = 0;
+var pc = (p+1);
+var body = "";
+
+while (titles[p]) {
+ /////////////   text += heads[h] + "<br>";
+    
+body+= '<!-- ### '+pc+' ### --><section class=step><div class=title>'+titles[p] + '</div><div id=html'+p+' >'+contents[p]+'</div></section><!-- ######### -->';
+
+
+///     console.log(p);
+///     console.log('html'+p);
+////     console.log('con'+p);
+
+    p++;
+    pc++
+}
+
+
+document.write(body);
+
+
+</script>
+
+
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| CLose out the sections |||||||||||||||||||||||||| -->
+
+    </div>
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| The vis div that holds interactive goodies |||||| -->
+
+    <div id="vis"></div>
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| Close container and graphic ||||||||||||||||||||| -->
+
+ </div>
+</div>
+
+
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+ <script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script type="text/javascript" src="js/queue.js"></script>
+<script type="text/javascript" src="js/scroller.js"></script>
+
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| dormant interactive goodies |||||||||||||||||||||
+<script type="text/javascript" src="js/three.js"></script>
+<script type="text/javascript" src="js/Projector.js"></script>
+<script type="text/javascript" src="js/CanvasRenderer.js"></script>
+<script type="text/javascript" src="js/FlyControls.js"></script>
+<script type="text/javascript" src="js/topojson.v0.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
+<script type="text/javascript" src="dome.js"></script>
+     ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||  -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| Daddy JS file ||||||||||||||||||||||||||||||||||| -->
+
+<script src="js/scrolly.js"></script>
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||| Preloader ||||||||||||||||||||||||||||||||||||||| -->
+
+<div class="hidden">
+  <script type="text/javascript">
+    <!--//--><![CDATA[//><!--
+      var images = new Array()
+      function preload() {
+        for (i = 0; i < preload.arguments.length; i++) {
+          images[i] = new Image()
+          images[i].src = preload.arguments[i]
+        }
+
+      }
+images.onload = notify();
+
+      function notify()  {
+            document.getElementById('play').style.display = 'none';
+}
+
+
+      preload(
+        "1.jpg",
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg",
+        "images/icon_big_boot.png",
+        "menu.png"
+
+      )
+    //--><!]]>
+  </script>
+</div>
+
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+	<script type="text/javascript"> 
+
+window.addEventListener("resize", onResize, false);
+
+  
+                
+            
+
+function onResize() {
+
+ 
+var BG = document.getElementById('big');
+BG.style.height = BG.parentElement.clientHeight;
+var oldH = BG.parentElement.clientHeight;
+
+
+////// 
+               
+
+    if(Math.abs(oldH - BG.parentElement.clientHeight) > 60){
+    
+             for ( var ri = 0; ri < (numrows+1); ri++ ) 
+                {
+var BGg = 'big'+ri;
+  
+  document.getElementById(BGg).BGg.style.height = BGg.parentElement.clientHeight + 'px';
+
+   ///////   BG.style.height = BG.parentElement.clientHeight + 'px';
+      
+      			}
+console.log(BGg);
+      
+      oldH = BGg.parentElement.clientHeight;
+    }
+}
+           
+
+	</script>
+
+
+</body>
+</html>

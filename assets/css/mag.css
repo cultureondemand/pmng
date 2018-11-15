@@ -1,0 +1,737 @@
+
+body {
+margin: 0 !important;
+padding: 0 !important;
+background-color: #000 !important;
+}
+
+.container {
+width:100%;
+height: 100%;
+top:0;
+margin:0;
+padding: 0;
+}
+
+ a:link,
+a:visited {
+color: black;
+background-color: #ffd200;
+text-decoration: none;
+cursor: pointer;
+}
+
+a:hover {
+color: yellow;
+background-color: #000;
+
+text-decoration: underline;
+}
+
+
+
+.container {
+width:100%;
+height: 100%;
+top:0;
+margin:0;
+padding: 0;
+}
+
+.ring {
+width:100%;
+height: 30%;
+margin:0;
+padding: 0;
+display: block;
+position: absolute;
+}
+
+ 
+.container#tweet {
+padding-top: 3em;
+}
+
+
+ div.tooltip {
+background: rgba(0, 0, 0, 0.6);
+color: #FFFFFF;
+font-size: 12px;
+font-family: 'Oswald', 'HelveticaNeue-Light', Arial, Helvetica, sans-serif;
+padding: 4px 6px;
+pointer-events: none;
+position: absolute;
+text-align: center;
+}
+
+
+
+
+
+#containerGL {
+width:100%;
+height: 100%;
+display:inline-block;
+position: fixed;
+z-index: -333;
+top:0;
+margin:0;
+padding: 0;
+text-align:left;
+
+ background:url(wb01.png);  
+ background-size:cover; 
+
+ 
+ 
+ 
+ 
+
+}
+
+
+
+
+#containerGGL {
+width:100%;
+height: 100%;
+display: inline-block;
+position: fixed;
+z-index: -332;
+
+top:0;
+margin:0;
+padding: 0;
+
+}
+
+
+
+#containerGLB {
+width:100%;
+height: 100%;
+display:inline-block;
+position: fixed;
+z-index: -333;
+
+ background:url(ecs2015.jpg);  
+ background-size:cover; 
+
+
+
+top:0;
+margin:0;
+padding: 0;
+cursor: pointer;
+
+}
+
+
+
+#containerGLC {
+width:100%;
+height: 100%;
+display:inline-block;
+position: fixed;
+  float: right;
+ z-index: 3;
+top:0;
+margin:0;
+
+}
+
+
+#containerGLD {
+width:100%;
+height: 100%;
+display:inline-block;
+  background:url(wb02.png);  
+background-size:cover; 
+
+position: fixed;
+ float: right;
+z-index: 3;
+top:0;
+margin:0;
+padding-left: 0;
+}
+
+
+ 
+
+
+
+
+#containerGLE {
+width:100%;
+height: 100%;
+display:inline-block;
+position: fixed;
+z-index: -333;
+top:0;
+margin:0;
+padding: 0;
+cursor: default;
+
+}
+
+
+
+
+
+
+#containerGLF {
+width:100%;
+height: 100%;
+display:inline-block;
+position: fixed;
+z-index: -333;
+top:0;
+margin:0;
+padding: 0;
+}
+
+
+
+
+
+#containerGLG {
+width:100%;
+height: 100%;
+display:none;
+position: fixed;
+z-index: -66;
+top:0;
+margin:0;
+padding: 0;
+min-width: 400px;
+background:url(grandcanyon.jpg);
+background-size:cover; 
+color: #fff;
+cursor: pointer;
+
+}
+
+
+
+#containerGLH {
+width:100%;
+height: 100%;
+display:none;
+background-color: #000;
+position: fixed;
+z-index: -333;
+top:0;
+margin:0;
+padding: 0;
+cursor: pointer;
+
+}
+
+
+
+
+
+
+#containerGLI {
+width:100%;
+height: 100%;
+display:none;
+background-color: #000;
+color: #fff;
+position: fixed;
+z-index: -333;
+
+top:0;
+margin:0;
+padding: 0;
+}
+
+
+
+
+
+
+
+#containerGLV {
+width:100%;
+height: 100%;
+display:none;
+background-color: #000;
+color: #fff;
+position: fixed;
+z-index: 3;
+padding-left: 0;
+
+top:0;
+margin:0;
+}
+
+
+
+
+
+
+#containerGLX {
+width:100%;
+height: 100%;
+display:none;
+
+color: #fff;
+position: fixed;
+z-index: 3;
+top:0;
+margin:0;
+padding: 0;
+text-align:right;
+float:right;
+}
+
+
+
+
+#plotD {
+ width:100%;
+height: 100%;
+bottom: 0;
+ }
+
+#plot {
+padding: 0;
+
+width:100%;
+height: 100%;
+bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.land {
+fill: rgb(255, 222, 0);
+stroke-opacity: 1;
+}
+
+.countries path {
+stroke: rgb(80, 64, 39);
+stroke-linejoin: round;
+stroke-width:.5;
+fill: rgb(117, 87, 57);
+opacity: .1;
+}
+
+.countries path:hover {
+fill-opacity:.1;
+stroke-width:1;
+opacity: 1;
+}
+
+
+.graticule {
+fill: none;
+stroke: black;
+stroke-width:.5;
+opacity:.2;
+}
+
+.labels {
+font: 1em 'Oswald', sans-serif;
+fill: white;
+opacity: .8;
+}
+
+.noclicks {
+pointer-events:none;
+}
+
+.point{
+opacity:.6;
+}
+
+
+
+
+
+
+#graphic {
+padding-top: 0;
+font-family:"Oswald", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; 
+width: 100%;
+height: auto;
+position: relative;
+}
+svg{
+width: 100%;
+height: 100%;
+display: block; margin: 0 auto;
+
+}
+path.slice{
+stroke-width:2px;
+}
+
+polyline{
+opacity: .3;
+stroke: black;
+stroke-width: 2px;
+fill: none;
+}
+
+
+
+#topbar {
+position: fixed;
+color:#ffffff;
+display: inline-block;
+top: 0px;
+z-index: 9990;
+padding-top: 1em;
+padding-bottom: 2em;
+margin-left: 7em;
+margin-right: 3em;
+width: 90%;
+line-height: 1.6em;
+border-top: 9px solid #fff;
+
+
+font-family:"Oswald", "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; 
+font-size: .6em;
+font-weight: 700;
+
+}
+
+ 
+
+
+
+
+
+#flag {
+position: fixed;
+color:#fff;
+display: block;
+bottom: 16em;
+right:18em;
+z-index: 99990;
+ padding-top: .2em;
+
+ 
+}
+
+
+
+#spots {
+position: fixed;
+color:#fff;
+display: inline-block;
+top: 2%;
+left:4%;
+z-index: 9990;
+ padding-top: 2em;
+
+ float: right;
+ 
+
+
+
+background-color: url('images/SprayDots.png');
+
+user-select: none;
+ -moz-user-select: none;
+ 
+-webkit-user-select: none;
+ 
+-ms-user-select: none;
+
+
+}
+
+
+
+
+#sections {
+position: absolute;
+color:#ffffff;
+display: inline-block;
+top: 0px;
+z-index: 90;
+padding-top: 6em;
+padding-bottom: 10em;
+padding-left: 0;
+padding-right: 0;
+font-size: 1.2em;
+width: 30%;
+min-width:260px;
+-webkit-user-select: none;  -khtml-user-select: none;   -moz-user-select: none; -o-user-select: none;    user-select: none; 
+}
+
+.step {
+margin-bottom: 18em;
+   font-family: 'Trocchi', serif;
+font-size: 1.2em;
+line-height: 1.4em;
+color: #fff;
+font-style: normal;
+font-weight: 300;
+padding-top: .1em;
+
+}
+
+
+.stepB {
+ padding-top: 12em;
+ margin-bottom: 8em;
+   font-family: 'Trocchi', serif;
+font-size: 1.2em;
+line-height: 1.4em;
+color: #fff;
+font-style: normal;
+font-weight: 300;
+
+}
+
+#sections .title {
+
+
+  font-size:2.8em;
+
+font-family:'Oswald', sans-serif;
+font-weight:700;
+line-height:1em;
+
+
+  margin-bottom: .8em;
+color: #fff;
+line-height: 1em;
+font-style: normal;
+ 
+
+
+
+
+}
+
+
+.divider {
+
+display: block;
+position: absolute;
+width: 100%;
+max-width: 250px;
+height: 1em;
+margin-bottom: .3em;
+margin-top: .3em;
+
+}
+
+
+
+#sections .titleB {
+font-family:'Oswald', sans-serif;
+font-weight:700;
+ 
+font-size: 3.4em;
+ margin-bottom: .3em;
+color: #fff;
+line-height: 1em;
+font-style: normal;
+ 
+}
+
+#extra-space {
+height: 3em;
+}
+
+#vis {
+display: inline-block;
+position: fixed;
+top: 0;
+color:#000000;
+width: 100%;
+height: 100%;
+z-index: 1;
+padding-left: 26%;
+/* height: 600px; */
+/* width: 600px; */
+/* background-color: #ddd; */
+}
+
+#vis .title {
+font-family:'Oswald', sans-serif;
+font-weight:700;
+top: 6em;
+ font-size:14em;
+text-anchor: middle;
+color:#000;
+font-style: normal;
+ display:none;
+
+}
+
+#vis .sub-title {
+font-family:'Oswald', sans-serif;
+font-weight:700;
+font-size: 8em;
+color:#fff;
+text-anchor: middle;
+font-style: normal;
+ 
+ }
+ 
+.axis path,
+.axis line {
+fill: none;
+stroke: #fff;
+shape-rendering: crispEdges;
+}
+
+.highlight {
+fill: #ffd200;
+ }
+
+.cough-arrow {
+stroke: #5d5d5d;
+stroke-width: 4px;
+
+}
+
+
+.openvis-title {
+font-family:'Oswald', sans-serif;
+font-weight:700;
+fill: #fff;
+
+z-index: 3999;
+}
+
+.count-title {
+
+ fill: #fff;
+font-family:'Oswald', sans-serif;
+font-weight:700;
+z-index: 999;
+}
+
+
+.count-titleB {
+
+ fill: #fff;
+font-family:'Oswald', sans-serif;
+font-weight:700;
+z-index: 999;
+}
+
+.count-titleC {
+
+ fill: #fff;
+font-family:'Oswald', sans-serif;
+font-weight:700;
+z-index: 999;
+}
+
+
+
+
+.line {
+stroke: white;
+stroke-width: 2px;
+fill: none;
+}
+
+
+
+.lineX {
+stroke: white;
+stroke-width: 2px;
+fill: none;
+}
+
+
+
+
+ 
+.hist:hover {
+fill: white ;
+}
+
+
+
+
+ 
+.bar:hover {
+fill: white ;
+}
+
+.x.axis path {
+display: none;
+}
+
+.d3-tip {
+line-height: 1;
+font-weight: bold;
+padding: 12px;
+background: rgba(0, 0, 0, 0.8);
+color: #fff;
+border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+box-sizing: border-box;
+display: inline;
+font-size: 10px;
+width: 100%;
+line-height: 1;
+color: rgba(0, 0, 0, 0.8);
+content: "\25BC";
+position: absolute;
+text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+margin: -1px 0 0 0;
+top: 100%;
+left: 0;
+}
+
+
+
+.node circle {
+cursor: pointer;
+/*stroke: #3182bd;
+///stroke-width: 1.5px; */
+}
+
+.node text {
+font: .8em "HelveticaNeue-Light", sans-serif;
+pointer-events: none;
+text-anchor: middle;
+}
+
+line.link {
+fill: none;
+stroke: #D6D6D6;
+stroke-width: .5px;
+}
+
+line.linkX {
+fill: none;
+stroke: #D6D6D6;
+stroke-width: .5px;
+}
+
+.bar-text {
+font: 6em "HelveticaNeue-Light", sans-serif;
+font-weight: 600;
+pointer-events: none;
+ }

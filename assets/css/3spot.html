@@ -1,0 +1,504 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <title>Threespot</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>  
+	<link rel="stylesheet" type="text/css" href="css/3spot.css"/>
+	<link rel="stylesheet" type="text/css" media="screen,print" href="css/paint.css" />
+	<link href='https://fonts.googleapis.com/css?family=Trocchi|Vast+Shadow' rel='stylesheet' type='text/css'> 
+	<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+
+<style type="text/css">
+  
+
+#scrollimg {
+  position: fixed;
+  color:#fff;
+  display: block;
+  bottom: 20%;
+  z-index: 19990;
+ line-height: 1.6em;
+width: 85%;
+    padding-bottom: 1%;
+    padding-left: 35%;
+ 
+
+}
+
+
+#containerMore {
+width:70%;
+height: 100%;
+display:inline-block;
+position: fixed;
+z-index: -333;
+top:10%;
+margin:0;
+padding: 0;
+left: 30%;
+float: right;
+
+}
+
+
+
+
+
+
+section>p:first-child:first-letter {
+color:#000;
+display:inline;
+float:left;
+font-size:4.4em;
+font-family:'Oswald', sans-serif;
+font-weight:700;
+line-height:0.8em;
+margin:0.03em 0.04em 0 0;
+text-transform:uppercase;
+}
+
+ 
+ 
+ 
+ 
+video#bgvid { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(wb02.png) no-repeat;
+    background-size: cover; 
+    transition: 1s opacity;
+    display:block;
+}
+ 
+  
+video#bgvid02 { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(wildbeast05b.png) no-repeat;
+    background-size: cover; 
+    transition: 1s opacity;
+    display:block;
+}
+ 
+  
+  
+  
+  #vis {
+display: inline-block;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+padding:0;
+/* height: 600px; */
+/* width: 600px; */
+/* background-color: #ddd; */
+}
+
+
+
+
+
+
+.stopfade { opacity: .5; }
+
+
+#follow {
+  background: none;
+}
+
+.grey {
+  color: #777;
+}
+
+a:link,
+a:visited {
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+ 
+a {
+color:#0fff0 !important;
+}
+
+.info{ font-family: sans-serif; position: absolute; color: #fff; background: rgba( 0, 0, 0, .8 );	bottom: 20px;
+	right: 20px;
+	padding: 5px;
+	text-align: right;
+ }
+.info a{color: inherit;  }
+
+ 
+ 
+
+#info a:hover, #blog a:hover {
+	text-decoration: underline;color: inherit; 
+}
+
+#info div {
+	padding: 0 5px;font-family: sans-serif; position: absolute; color: #fff; background: rgba( 0, 0, 0, .8 );	bottom: 20px;
+	right: 20px;
+	padding: 5px;
+	text-align: right;
+}
+
+#info div img {
+	position: relative;
+	top: 9px;
+	border-radius: 3px;
+}
+
+#info #artist {
+	margin-right: 5px;
+	font-family:'Trocchi', sans-serif;
+}
+
+#info #artist .name {
+	font-size: 0.8em;
+}
+
+#info #artist .song {
+
+}
+
+ 
+#play {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+}
+
+#play_link {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 252px;
+	width: 129px;
+	background: url('/stories/images/play.png') left center no-repeat transparent;
+	cursor: pointer;
+}
+
+
+#playplay {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+
+
+.playplay-button {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.3);
+		 background: url('/stories/images/play.png') center no-repeat transparent;
+top: 0;
+	left: 0;
+	height: 252px;
+	width: 129px;
+ 	cursor: pointer;
+}
+
+#blog {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	padding: 5px;
+}
+
+#intro {
+   font-family: 'Trocchi', serif;
+  position:absolute;
+  display:block;
+  width:36%;
+ }
+
+#intro>p:first-child:first-letter {
+color:#fff;
+display:inline;
+float:left;
+font-size:5em;
+font-family:'Oswald', sans-serif;
+font-weight:700;
+line-height:0.7em;
+margin:0.03em 0.04em 0 0;
+text-transform:uppercase;
+}
+
+ 
+  
+#introB {
+   font-family: 'Trocchi', serif;
+  position:absolute;
+  display:block;
+ }
+
+#introB>p:first-child:first-letter {
+color:#f000f0;
+display:inline;
+float:left;
+font-size:5.2em;
+font-family:'Vast Shadow', sans-serif;
+line-height:0.8em;
+margin:0.03em 0.04em 0 0;
+text-transform:uppercase;
+}
+
+ 
+ 
+ 
+
+  
+	
+		    #container { z-index:0; }
+	    #vidCanvas { display: none; z-index:0; }
+
+	    #inputCanvas { display: none; z-index:0; }
+    #inputVideo { position: absolute; right: 0; bottom: 0; z-index:0; -webkit-transform: scaleX(-1);}
+    #overlay { position: absolute; right: 0; bottom: 0; z-index:0; -webkit-transform: scaleX(-1);}
+    #selector { position: absolute; top: 5em; left: 1em; color: white; z-index:9999; }
+    #forkme { z-index:99; }
+    #soundcloud-url { width: 250px; }
+  
+	
+   
+   
+   
+   
+
+ 
+
+</style>
+
+
+
+ 
+
+
+ 
+	 <script type="text/javascript">
+<!--
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+//-->
+</script>
+
+
+
+<style type="text/css">
+
+path {
+  fill: #ddd;
+  fill-opacity: .8;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+line {
+  stroke: #999;
+}
+
+</style>
+
+
+
+</head>
+
+<!-- <body style="background:url(ancient_stardust.jpg);background-size:cover;"> -->
+<body>
+ 
+
+<div id="logo" style="margin:0; padding:0;float:right; z-index:9999999; display:none; position:absolute; right:1%; top:3%; ">
+<a href="#" onclick="toggle_visibility('foo');toggle_visibility('cursorhelp');"><img src="menu.png" alt="Culture On Demand" border="0" height="100%" align="right"></a></div>
+
+ <div id="output" style="font-family:'Oswald', serif;font-weight:300;font-size:.8em;color:#000;float:left;display:block;position:fixed;left:1%;bottom:1%;padding:.3em;background-color: #fff;opacity:1;max-width:25%; "> ... </div>
+
+   
+<div id="pmnglogo" style="top:0;left:0;display:block;position:fixed;z-index:99999999; ">
+<a href="#" onclick="toggle_visibility('infoB');toggle_visibility('toc');"><img src="images/icon_big_boot.png" border="0" alt="Poor Man's National Geographic" style="width:8%; min-width:50px; "></a>
+</div>
+
+
+ 
+ <div id="toc" style="font-family:'Oswald', serif;font-weight:400;font-size:1.1em;color:#000;float:right;display:none;position:fixed;left:1%;top:20%;padding-top:.3em;padding-bottom:.3em;padding-right:1%;padding-left:1%;width:20%;background-color: #fff; "> 
+Table of Contents:
+<br />
+The storyline from Seattle to Miami
+<br />
+</div>
+
+
+ 
+
+<!-- ########################################### -->
+
+<div class="container" id="container">
+<div id="graphic">
+
+
+
+
+ 
+
+
+<div id='container0'><div id='topbar'>0</div></div>
+
+<div id='container1' style='text-align:left;overflow:hidden'><div id='topbar'>1</div></div>
+<div id='container2' style='text-align:left;overflow:hidden'><div id='topbar'>2</div></div>
+
+<div id='container3'><div id='topbar'>3</div></div>
+<div id='container4' onclick="window.open('https://www.mapbox.com/bites/00332/#13.3816/36.5385/-105.5126/18.0142/30.5289'); return false; "><div id='topbar'>4</div></div>
+<div id='container5'><div id='topbar'>5</div></div>
+<div id='container6'><div id='topbar'>6</div></div> 
+
+
+  
+
+ 
+    <div id="sections">
+
+
+
+<section class="step" style="color:#000 !important;margin-left:0;padding:1em;z-index:1;background-color: #196cb7;overflow:hidden;opacity: .3 !important; ">
+<a name="jump"></a>
+<div class="title" style="color:#000 !important;font-family:'Oswald', sans-serif;font-weight:700;line-height:1em;text-transform:uppercase; ">
+QUALITY STANDARDS
+</div>
+for Expanded Learning in Public and Affordable Housing
+<span id="scrollimg"><a href="#jump" style="background: none !important; z-index: 9999999; "><img src="scrolldown.png" border="0" alt="Scroll Down For More" style="text-align: center; "></a></span>
+</section>
+
+
+
+
+<section class="step" style="color:#000 !important;margin-left:0;padding:1em;z-index:1;background-color: #fff;overflow:hidden; ">
+<div class="title" style="color:#000 !important;font-family:'Oswald', sans-serif;font-weight:700;line-height:1em;text-transform:uppercase; ">
+Hey, What&#8217;s Possible?                
+</div>
+Ipsum lorem ament dolor. Ipsum lorem ament dolor. Ipsum lorem ament dolor. Ipsum lorem ament dolor.      
+</section>
+
+
+ 
+   
+
+
+
+<section class="step">
+<div class="title">
+Mapping Networks
+</div>
+There are many different models to visualize networks and other structured data. This is a small cross section of organizations where we have a primary relationship with a staffer on LinkedIn.
+</section>
+
+
+<section class="step" style="color:#fff !important;">
+<div class="title" style="color:#fff !important;">More Engaging Maps              
+</div>
+We can create far more engaging ways to display map-based information than a simple map embed. <a href="https://www.mapbox.com/bites/00332/#13.3816/36.5385/-105.5126/18.0142/30." target=_blank">Click anywhere on the screen</a> to see an example of a 3D terrain base map, on which we can easily plot GIS data such as the location of public art scattered throughout a town.
+</section>
+
+
+
+<section class="step" style="color:#fff !important;">
+<div class="title" style="color:#fff !important;">
+More Samples              
+</div>
+We have given you just a tiny glimpse into the possiblities, and are happy to share even more samples than those contained in this document. Click any of the links to the right for more interactive inspiration and prototypes.
+</section>
+
+
+
+<section class="step" style="color:#fff !important;">
+<div class="title" style="color:#fff !important;">
+More Samples              
+</div>
+We have given you just a tiny glimpse into the possiblities, and are happy to share even more samples than those contained in this document. Click any of the links to the right for more interactive inspiration and prototypes.
+</section>
+
+
+
+
+
+
+    </div>
+    <div id="vis" style="display: none !important; ">
+ </div>
+    <div id="extra-space">
+    </div>
+  </div>
+</div>
+
+
+ <script src="//d3js.org/d3.v3.min.js"></script>
+<script src="//d3js.org/topojson.v1.min.js"></script>
+<script type="text/javascript" src="js/queue.js"></script>
+<script type="text/javascript" src="js/scroller.js"></script>
+
+<script type="text/javascript" src="js/three.js"></script>
+<script type="text/javascript" src="js/Projector.js"></script>
+<script type="text/javascript" src="js/CanvasRenderer.js"></script>
+ 
+
+ <!-- 
+
+<script type="text/javascript" src="js/FlyControls.js"></script>
+
+
+<script type="text/javascript" src="js/scatterplot.js"></script> 
+<script type="text/javascript" src="js/topojson.v0.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script> -->
+
+
+ 
+
+<!-- 
+<script type="text/javascript" src="dome.js"></script>
+  -->
+
+<script src="js/3spot.js"></script>
+
+
+
+</body>
+</html>

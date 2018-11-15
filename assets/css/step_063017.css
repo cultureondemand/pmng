@@ -1,0 +1,440 @@
+#sections .step:first-child .bgbg {
+  z-index: 0;
+}
+
+.step {
+  transition: all .3s ease;
+
+}
+
+.step-content {
+/*  max-width: 800px; */
+  width:100%;
+  padding:6vw;
+  margin: 0 auto 10vh;
+  padding:3vw;
+}
+
+
+
+.icon {
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.4);
+  height: 60px;
+  left: 2vw;
+  position: fixed;
+  top: 46px;
+  width: 60px;
+  z-index: 99999;
+}
+
+
+
+.example {
+  -webkit-columns: 2 250px;
+  -moz-columns: 2 250px;
+  columns: 2 250px;
+  -webkit-column-gap: 5em;
+  -moz-column-gap: 5em;
+  column-gap: 5em;
+  -webkit-column-rule-width: 1px;
+  -moz-column-rule-width: 1px;
+  column-rule-width: 1px;
+  -webkit-column-rule-color: #828282;
+  -moz-column-rule-color: #828282;
+  column-rule-color: #828282;
+  margin: 2em auto 2em;
+}
+
+.example-dotted {
+  -webkit-column-rule-style: dotted;
+  -moz-column-rule-style: dotted;
+  column-rule-style: dotted;
+}
+
+
+
+
+ul {
+
+  margin-bottom:1em;
+
+}
+
+
+h3 {
+
+  padding: 0;
+  font-family:
+    "HelveticaNeue",
+    "Helvetica Neue",
+    'TeXGyreHerosRegular',
+    "Helvetica",
+    "Tahoma",
+    "Geneva",
+    "Arial",
+    sans-serif;
+line-height:1.3em;
+padding-bottom: .3em;
+font-weight: 800;
+    border-bottom: thin solid;
+margin-top:0;
+margin-bottom:.6em;
+top:0;
+
+
+}
+
+
+
+h3.prog {
+color:#3871C1;
+ }
+
+
+h3.staff {
+color:#379633;
+}
+
+
+h3.part {
+color:#800AD6;
+}
+
+#container-0 {
+/*  max-width: 800px; */
+
+  background-color:rgba(56, 113, 193,.9);
+
+}
+#container-1 {
+/*  max-width: 800px; */
+background-color:rgba(55, 150, 51,.9);
+
+
+}
+
+
+#container-2 {
+/*  max-width: 800px;
+*/
+  background-color:rgba(56, 113, 193,.9);
+}
+
+#container-3 {
+/*  max-width: 800px;    background-color:rgba(128, 10, 214,.9);
+ */
+   background-color:rgba(56, 113, 193,.9);
+
+ }
+
+#container-4 {
+/*  max-width: 800px;   background-color:#001557;
+ */
+
+   background-color:rgba(56, 113, 193,.9);
+
+ }
+
+#container-5 {
+/*  max-width: 800px;    background-color:#AF202D;
+*/
+  background-color:rgba(56, 113, 193,.9);
+
+ }
+
+
+
+#container-6 {
+/*  max-width: 800px;
+*/
+background-color:rgba(55, 150, 51,.9);
+}
+
+
+
+#container-7 {
+/*  max-width: 800px;
+*/
+background-color:rgba(55, 150, 51,.9);
+}
+
+
+
+
+
+
+#container-8 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(128, 10, 214,.9);
+}
+
+
+
+
+
+#container-9 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(175, 32, 45,.9);
+}
+
+
+
+
+
+#container-10 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(56, 113, 193,.9);
+}
+
+
+
+#container-11 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(56, 113, 193,.9);
+}
+
+
+
+#container-12 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(55, 150, 51,.9);
+}
+
+
+
+#container-13 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(128, 10, 214,.9);
+}
+
+
+
+#container-14 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(175, 32, 45,.9);
+}
+
+
+
+#container-15 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(175, 32, 45,.9);
+}
+
+
+
+#container-16 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(56, 113, 193,.9);
+}
+
+
+
+#container-17 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(55, 150, 51,.9);
+}
+
+
+
+#container-18 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(128, 10, 214,.9);
+}
+
+
+
+
+#container-19 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(175, 32, 45,.9);
+}
+
+
+#container-20 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(56, 113, 193,.9);
+}
+
+
+#container-21 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(56, 113, 193,.9);
+}
+
+
+#container-22 {
+/*  max-width: 800px;     
+*/
+background-color:rgba(56, 113, 193,.9);
+}
+
+
+
+
+
+
+
+blockquote {
+    font-family: "HelveticaNeue",
+      "Helvetica Neue",
+      'TeXGyreHerosRegular',
+      "Helvetica",
+      "Tahoma",
+      "Geneva",
+      "Arial",
+      sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+
+    width: 100%;
+    margin: 0.25em 0;
+    padding: 0.35em 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #001557;
+    border-left: none;
+}
+
+blockquote:before {
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    color: #001557;
+}
+
+blockquote cite {
+    color: #001557;
+    font-size: 14px;
+    display: block;
+    text-align: right;
+    float: right;
+    margin-top: 5px;
+}
+
+
+.bigblues {
+  color:#3871C1;
+  font-weight:800;
+  text-transform: uppercase;
+}
+
+.imgcontainer {
+
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.imgcontainerB {
+
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: .3em;
+  margin-top: 1em;
+}
+
+
+#container-22 {
+
+display: none;
+
+}
+
+#titleCloser {
+
+    background-color: rgba(56, 113, 193, .9);
+padding:3vh;
+top: 0;
+left: 0;
+  text-transform: none !important;
+  color: #fff;
+  font-size: 1.5em;
+display: none;
+
+    font-family: "HelveticaNeue",
+      "Helvetica Neue",
+      'TeXGyreHerosRegular',
+      "Helvetica",
+      "Tahoma",
+      "Geneva",
+      "Arial",
+      sans-serif;
+  font-weight: 400;
+
+  margin-bottom: 0;
+  margin-top: 0;
+  text-align: left;
+  line-height: 1.3em;
+  position: fixed;
+  width: 100%;
+  z-index: 99999999;
+}
+#titleCloser img {
+  margin-right: 1em;
+}
+
+#logoOpener {
+
+    background-color: #fff;
+
+bottom: 0;
+left: 0;
+  text-transform: none !important;
+  color: #3871C1;
+  font-size: 1.4em;
+display: inline-block;
+
+    font-family: "HelveticaNeue",
+      "Helvetica Neue",
+      'TeXGyreHerosRegular',
+      "Helvetica",
+      "Tahoma",
+      "Geneva",
+      "Arial",
+      sans-serif;
+  font-weight: 400;
+position: fixed;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: .3em;
+  text-align: center;
+  line-height: 1em;
+   width: 100%;
+   z-index: 9999999999999;
+ }
+#logoOpener img {
+  margin-top: 1em;
+  margin-bottom: .6em;
+
+}
+
+.introimg {
+
+padding: .3em;
+
+
+}
+
