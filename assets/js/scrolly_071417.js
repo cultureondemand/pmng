@@ -12,10 +12,10 @@ var scrollVis = function() {
     height = window.innerHeight;
 
   var margin = {
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0
+    top: 10,
+    left: 20,
+    bottom: 80,
+    right: 10
   };
 
   // Keep track of which visualization
@@ -164,18 +164,6 @@ var scrollVis = function() {
     ////////////////////////////////////////////
     /////////////////////////////
 
-
-var vid0 = document.getElementById("bgvid0"); 
-
-     vid0.play(); 
- 
-
-
-var vid1 = document.getElementById("bgvid1"); 
-
-     vid1.pause(); 
- 
-
     ///////////
     ///////////
   }
@@ -208,21 +196,6 @@ var vid1 = document.getElementById("bgvid1");
     var openerimg = document.getElementById("openerimg");
     openerimg.setAttribute("style", "visibility:hidden; ");
 
-
-
-
-
-var vid1 = document.getElementById("bgvid1"); 
-
-     vid1.play(); 
- 
-
-
-var vid0 = document.getElementById("bgvid0"); 
-
-     vid0.pause(); 
- 
-
  
   }
 
@@ -232,21 +205,11 @@ var vid0 = document.getElementById("bgvid0");
    */
    
    
-  function showTitle2() {
-
-var vid1 = document.getElementById("bgvid1"); 
-
-     vid1.pause(); 
- }
+  function showTitle2() {}
 
   /////////////
   //////////
 
-
-
-
-    ///////////
-    ///////////
   /**
    *
    */
@@ -505,17 +468,17 @@ function display() {
 
     ////////////////document.body.style.backgroundImage = "url("+index+".jpg)";
 
-  ///  d3.selectAll("#container" + index).style("display", function(d, i) {
-  ///    return i == index ? "none" : "inline-block";
-  ///  });
+    d3.selectAll("#container" + index).style("display", function(d, i) {
+      return i == index ? "none" : "inline-block";
+    });
 
- ///   d3.selectAll("#container" + (index - 1)).style("display", function(d, i) {
- ////     return i == index ? "inline-block" : "none";
- ////   });
+    d3.selectAll("#container" + (index - 1)).style("display", function(d, i) {
+      return i == index ? "inline-block" : "none";
+    });
 
-////    d3.selectAll("#container" + (index + 1)).style("display", function(d, i) {
-///      return i == index ? "inline-block" : "none";
-////    });
+    d3.selectAll("#container" + (index + 1)).style("display", function(d, i) {
+      return i == index ? "inline-block" : "none";
+    });
 
     ///////////var getBG = document.getElementById( 'container'+index );
     ///////    getBG.setAttribute("style", "background-image:url("+index+".jpg); "  );
@@ -526,9 +489,9 @@ function display() {
     plot.activate(index);
   });
 
-//////////  scroll.on("progress", function(index, progress) {
-///////////    plot.update(index, progress);
-/////////////  });
+  scroll.on("progress", function(index, progress) {
+    plot.update(index, progress);
+  });
 }
 
 // load data and display

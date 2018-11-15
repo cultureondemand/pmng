@@ -74,33 +74,6 @@
   }
 
   /**
-   * Create the Video bkg element
-   * @param {number} id - slide number matching the image filename
-   * @return {object} node - DOM element
-   */
-  function createVidBkg(bkgImage) {
-    var node = document.createElement("div");
-    node.className = "bgbg js-background-image";
-    var innerHTML =
-    
-    " <video autoplay playsinline muted controls loop poster='1.jpg' id='bgvid" + bkgImage.name + "' class='videobig' style='display: inline-block;'>"  +
-      '<source src="' +
-      bkgImage.wm +
-      '" type="video/webm">' +
-
-      '<source src="' +
-      bkgImage.mp +
-      '" type="video/mp4">' +
-      "</video>";
-    // node.style.backgroundImage = "url(assets/images/bkg/" + id + ".jpg)";
-    node.innerHTML = innerHTML;
-    return node;
-  }
-
-
-
-
-  /**
    * Create the bkg element
    * @param {number} id - slide number matching the image filename
    * @return {object} node - DOM element
@@ -126,7 +99,7 @@
 
   // Slide Instance
   var Slide = function() {};
-var count = 0;
+
   /**
    * Initialize new Slide
    * @param {object} config - slide settings
@@ -137,14 +110,9 @@ var count = 0;
    * @param {string} config.data.body - html string for body content
    */
     Slide.prototype.initialize = function(config) {
-     this.id = config.id;
+    this.id = config.id;
     this.slide = createSlide(config.id);
-    if (config.data.video == "yes") {
-    this.bkg = createVidBkg(config.data.bkgImage);
-    
-    } else {
     this.bkg = createBkg(config.data.bkgImage);
-    }
     this.sectionHeader = createSectionHeader(config.id, config.data.section);
     this.header = createHeader(config.data.header);
     this.body = createBody(config.data.body);

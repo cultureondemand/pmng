@@ -74,33 +74,6 @@
   }
 
   /**
-   * Create the Video bkg element
-   * @param {number} id - slide number matching the image filename
-   * @return {object} node - DOM element
-   */
-  function createVidBkg(bkgImage) {
-    var node = document.createElement("div");
-    node.className = "bgbg js-background-image";
-    var innerHTML =
-    
-    " <video autoplay playsinline muted controls loop poster='1.jpg' id='bgvid" + bkgImage.name + "' class='videobig' style='display: inline-block;'>"  +
-      '<source src="' +
-      bkgImage.wm +
-      '" type="video/webm">' +
-
-      '<source src="' +
-      bkgImage.mp +
-      '" type="video/mp4">' +
-      "</video>";
-    // node.style.backgroundImage = "url(assets/images/bkg/" + id + ".jpg)";
-    node.innerHTML = innerHTML;
-    return node;
-  }
-
-
-
-
-  /**
    * Create the bkg element
    * @param {number} id - slide number matching the image filename
    * @return {object} node - DOM element
@@ -126,7 +99,7 @@
 
   // Slide Instance
   var Slide = function() {};
-var count = 0;
+
   /**
    * Initialize new Slide
    * @param {object} config - slide settings
@@ -136,15 +109,10 @@ var count = 0;
    * @param {string} config.data.header - text for header
    * @param {string} config.data.body - html string for body content
    */
-    Slide.prototype.initialize = function(config) {
-     this.id = config.id;
+  Slide.prototype.initialize = function(config) {
+    this.id = config.id;
     this.slide = createSlide(config.id);
-    if (config.data.video == "yes") {
-    this.bkg = createVidBkg(config.data.bkgImage);
-    
-    } else {
     this.bkg = createBkg(config.data.bkgImage);
-    }
     this.sectionHeader = createSectionHeader(config.id, config.data.section);
     this.header = createHeader(config.data.header);
     this.body = createBody(config.data.body);
@@ -160,8 +128,6 @@ var count = 0;
     !!this.icon && this.slide.appendChild(this.icon);
     this.slide.appendChild(this.content);
 
-    this.slide.style.opacity = 1;
-
     document.body.appendChild(this.slide);
   };
 
@@ -169,7 +135,7 @@ var count = 0;
    * Makes the slide visible
    */
   Slide.prototype.show = function() {
-    this.slide.style.visibility = "visible";
+    this.slide.style.opacity = 1;
     this.slide.style.zindex = 1;
   };
 
@@ -177,7 +143,7 @@ var count = 0;
    * Hides the slide from the view
    */
   Slide.prototype.hide = function() {
-    this.slide.style.visibility = "hidden";
+    this.slide.style.opacity = 0;
     this.slide.style.zindex = 0;
   };
 

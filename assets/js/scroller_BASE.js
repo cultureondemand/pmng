@@ -56,9 +56,7 @@ function scroller() {
     // load.
     d3.timer(function() {
       position();
-   ///  timer.stop();
-       return true;
-
+      return true;
     });
   }
 
@@ -79,15 +77,15 @@ function scroller() {
       var conheight = this.getBoundingClientRect().height;
       
  
-//////  console.log(top);
-/////  console.log(conheight);
+  console.log(top);
+  console.log(conheight);
 
  
 
       if(i === 0) {
         startPos = top;
       }
-      sectionPositions.push((top+conheight) - startPos);
+      sectionPositions.push((top+conheight+100) - startPos);
     });
    containerStart = (container.node().getBoundingClientRect().top + container.node().getBoundingClientRect().height) + window.pageYOffset;  
     containerStartB = container.node().getBoundingClientRect().top + container.node().getBoundingClientRect().height;
@@ -107,7 +105,7 @@ function scroller() {
   
  
 
-    var pos = window.pageYOffset + 36 - containerStart;
+    var pos = window.pageYOffset - 10 - containerStart;
 
 
 
