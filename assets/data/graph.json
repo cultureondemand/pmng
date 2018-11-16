@@ -1,0 +1,87 @@
+  {
+   "name": "Possible Clients", "size": 743,
+   "children": [
+    {
+     "name": "Arts", "size": 3840,
+     "children": [
+      {"name": "GIA", "size": 1938},
+      {"name": "Hemera Fdn", "size": 1812},
+      {"name": "Holocaust Mus", "size": 1714},
+      {"name": "New World Symph", "size": 743}
+     ]
+    },
+    {
+     "name": "Civil Liberties", "size": 4840,
+     "children": [
+      {"name": "ACLU", "size": 938},
+      {"name": "EFF", "size": 1812},
+      {"name": "CCR", "size": 1714},
+      {"name": "Columbia Univ", "size": 1743}
+     ]
+    },
+    {
+     "name": "Climate", "size": 2840,
+     "children": [
+      {"name": "Human Impacts Inst", "size": 1534}
+     ]
+    },
+    {
+     "name": "Civic Engagement", "size": 6840,
+     "children": [
+      {"name": "The Feast", "size": 1074},
+      {"name": "Ashoka", "size": 1074},
+      {"name": "NCOC", "size": 1074},
+      {"name": "The Feast", "size": 1074},
+      {"name": "USC Innov Lab", "size": 1074},
+      {"name": "Atlantic Phil", "size": 974}
+     ]
+    },
+    {
+     "name": "Hunger", "size": 1840,
+     "children": [
+      {"name": "Robin Hood Fdn", "size": 974},
+      {"name": "OXFAM", "size": 1074}
+     ]
+    },
+    {
+     "name": "Human Rights", "size": 4840,
+     "children": [
+      {"name": "HRW", "size": 1534},
+      {"name": "UNHCR", "size": 1731},
+      {"name": "Amnesty", "size": 1840},
+      {"name": "HRC", "size": 914}
+     ]
+    },
+    {
+     "name": "Information", "size": 5840,
+     "children": [
+      {"name": "Mozilla Fdn", "size": 1534},
+      {"name": "The Nib", "size": 1731},
+      {"name": "GW School of Jrnlsm", "size": 1940},
+      {"name": "Sunlight Fdn", "size": 914},
+      {"name": "Omidyar", "size": 916}
+     ]
+    },
+    {
+     "name": "Womens Rights", "size": 3840,
+     "children": [
+      {"name": "NARAL", "size": 1534},
+      {"name": "Planned Parenthood", "size": 731} 
+           ]
+    },
+    {
+     "name": "Foundations", "size": 3840,
+     "children": [
+      {"name": "Ford Fdn", "size": 534},
+      {"name": "Kaufman Fdn", "size": 1731}, 
+      {"name": "Knight Fdn", "size": 1731} 
+           ]
+    },
+    {
+     "name": "Veterans", "size": 2840,
+     "children": [
+      {"name": "IAVA", "size": 1534} 
+     ]
+    }
+   ]
+  }
